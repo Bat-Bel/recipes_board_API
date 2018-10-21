@@ -6,8 +6,9 @@ exports.seed = function(knex, Promise) {
     // Inserts seed entries
     return knex('users').insert([
       {
-        id: uuid(),
+        uuid: uuid(),
         user_name: 'yasskate',
+        password: 'test123',
         first_name: 'Yasser',
         last_name: 'Batas',
         email: 'yassk8@gmail.com',
@@ -15,8 +16,9 @@ exports.seed = function(knex, Promise) {
         phone_number: '3121234826'
       },
       {
-        id: uuid(),
+        uuid: uuid(),
         user_name: 'sambelmor',
+        password: 'test123',
         first_name: 'Dzoara',
         last_name: 'Bello',
         email: 'sambelmor@gmail.com',
