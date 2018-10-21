@@ -1,10 +1,3 @@
-// Update with your config settings.
-/* development: {
-  client: 'sqlite3',
-  connection: {
-    filename: './dev.sqlite3'
-  } */
-
 module.exports = {
   development: {
     client: 'postgresql',
