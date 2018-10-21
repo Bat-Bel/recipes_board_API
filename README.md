@@ -5,24 +5,33 @@ $ git clone git@github.com:Bat-Bel/recipes_board_API.git
 $ cd recipes_board_API
 ```
 
+**DB name**
+should be:
+```
+recipes_db
+```
+
 # installations
 
 **Node version**
-
-Recomendation:
 ```
-https://github.com/creationix/nvm
-```
-
-```
-$ nvm install 10.8.0
 $ node -v
 v10.8.0
 ```
 
+Recomendation, Node Version Manager:
+```
+https://github.com/creationix/nvm
+```
+
+once installed: 
+```
+$ nvm install 10.8.0
+```
+
 **Postgresql:**
 
-Recomendation:
+Recomendation, Postgress App :
 ```
 https://postgresapp.com/
 ```
