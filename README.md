@@ -6,6 +6,7 @@ $ cd recipes_board_API
 ```
 
 **DB name**
+
 should be:
 ```
 recipes_db
@@ -57,12 +58,24 @@ $ npm install nodemon -g
 ```
 
 # Run project
+**once DB created**
+
+run knex migrations
+```
+$ knex migrate:latest
+```
+
+run knex seeds
+```
+$ knex seed:run
+```
+
 run project with nodemon
 ```
 $ nodemon
 ```
 
-run project with npm
+or run project with npm
 ```
 $ npm start
 ```
