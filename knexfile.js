@@ -1,3 +1,6 @@
+var dotenv = require('dotenv');
+dotenv.config();
+
 module.exports = {
   development: {
     client: 'postgresql',

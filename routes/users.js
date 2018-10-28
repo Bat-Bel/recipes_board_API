@@ -11,14 +11,17 @@ router.get('/', (req, res, next) => {
   });
 });
 
-router.get('/:id', (req, res, next) => {
+router.get('/:id(\\d+)/', (req, res, next) => {
   const { id } = req.params;
-  db('users').select('*').where({ id }).then(user => {
-    if (user.length > 0) {
-      res.json(user[0]);
-    }
-
+  db('users').where({ id }).first().then(user => {
+    typeof(user) != 'undefined' && res.json(user);
     res.json({ error: `There are not users with this id [${id}]` });
+  });
+});
+
+router.get('/otra', (req, res, next) => {
+  db('users').select('*').then(users => {
+    res.json(users);
   });
 });
 
