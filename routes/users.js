@@ -3,6 +3,9 @@ var router = express.Router();
 var knex = require('knex');
 var knexFile = require('../knexfile');
 var db = knex(knexFile[process.env.NODE_ENV || 'development']);
+const { verifyJWT_MW }  = require('../middlewares.js');
+
+router.all('*', verifyJWT_MW);
 
 /* GET users listing. */
 router.get('/', (req, res, next) => {
